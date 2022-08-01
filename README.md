@@ -1,6 +1,7 @@
 # PruebaTecnicaNewshore
 
 Introducción a la aplicación Angular
+
 Primero abra la Carpeta PruebaTecnicaNewshore-main
 En consola escribir
 cd PruebaTecnicaNewshore-main/Frontend
