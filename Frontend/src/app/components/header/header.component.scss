@@ -1,0 +1,24 @@
+.Principal{
+  position: relative;
+}
+
+.Principal img{
+  width: 100%;
+  filter: brightness(50%);
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+.Principal-content{
+  position: absolute;
+  top: 34%;
+  width: calc(100vw - 2rem);
+  display: flex;
+  justify-content: center;
+}
+
+.Principal-content h1{
+  color: white;
+ text-shadow: black 0.1em 0.1em 0.2em;
+  font-size: 2.5em;
+}

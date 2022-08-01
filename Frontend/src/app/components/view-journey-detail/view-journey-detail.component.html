@@ -1,0 +1,33 @@
+<h3 class="title-detail-journey">journey details</h3>
+
+<div class="info-container">
+  <p>Origin: {{journey.origin}}</p>
+  <p>Destination: {{journey.destination}}</p>
+  <p>Precio Total:  {{journey.prince}}</p>
+  <div class="flights">
+    <div>
+      <h4> Outbound flight</h4>
+      <p>Origin: {{journey.flights[0].DepartureStation}}</p>
+      <p>Destination: {{journey.flights[0].arrivalStation}}</p>
+      <p>FlightCarrier: {{journey.flights[0].flightCarrier}}</p>
+      <p>FlightNumber: {{journey.flights[0].flightNumber}}</p>
+      <p> Price: {{journey.flights[0].price}}</p>
+    </div>
+    <div>
+      <h4> Return flight </h4>
+      <p>Origin: {{journey.flights[1].DepartureStation}}</p>
+      <p>Destination: {{journey.flights[1].arrivalStation}}</p>
+      <p>FlightCarrier: {{journey.flights[1].flightCarrier}}</p>
+      <p>FlightNumber: {{journey.flights[1].flightNumber}}</p>
+      <p> Price: {{journey.flights[1].price}}</p>
+    </div>
+  </div>
+  <div>
+  <select name="coin" class="coin"  (change)="changeTheTypeOfCurrencyToDisplay(coin.value)" #coin>
+    <option value="1">dolares</option>
+    <option value="4000">Pesos</option>
+    <option value="0,915076">Euros</option>
+  </select>
+  <button class="close" mat-button mat-dialog-close>Close</button>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<main class="main">
+<h2> Ingresa  el Plan de Vuelo</h2>
+
+  <form (ngSubmit)="searchFlights(form)" #form="ngForm">
+    <div class="form-group">
+      <label for="origin">Ingresa la ciudad de origen</label>
+      <input type="text"
+             name="origin"
+             [(ngModel)]="journey.origin"
+             maxLength="3"
+             required="true"
+             id="origin">
+      <span *ngIf="form.submitted && form.controls['origin'].hasError('required')" class="error">El origen  es obligatorio</span>
+      <span *ngIf="form.submitted && form.controls['origin'].hasError('maxlength')" class="error">se permite como maximo 3 caracteres</span>
+    </div>
+
+    <div class="form-group">
+      <label for="destination">Ingresa la ciudad de Destino</label>
+      <input type="text"
+             name="destination"
+             id="destination"
+             [(ngModel)]="journey.destination"
+             maxLength="3"
+             required="true"
+      >
+      <span *ngIf="form.submitted && form.controls['destination'].hasError('required')" class="error">El Destino  es obligatorio</span>
+      <span *ngIf="form.submitted && form.controls['destination'].hasError('maxlength')" class="error">se permite como maximo 3 caracteres</span>
+    </div>
+
+    <input class="submit" type="submit"  value="Verificar Ruta">
+  </form>
+</main>
